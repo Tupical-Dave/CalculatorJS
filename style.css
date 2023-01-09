@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgb(63, 94, 251);
+  background: radial-gradient(circle, white 0%, rgba(63, 94, 251, 1) 100%);
+}
+
+.calc-board {
+  width: 300px;
+  height: 500px;
+}
+
+.result-board {
+  background: rgb(63, 94, 251);
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  min-height: 70px;
+  max-height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: right;
+  gap: 10px;
+}
+
+.previous-value {
+  font-size: 50px;
+}
+
+.current-value {
+    font-size: 30px;
+}
+
+.calc-display {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: repeat(5, 100px);
+}
+
+.calc-display button {
+  margin: 0;
+  padding: 0;
+  background: rgb(63, 94, 251);
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  cursor: pointer;
+  opacity: 1;
+  border: 0.5px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.calc-display :first-child {
+  background-color: red;
+}
+
+.double-size {
+  grid-column: span 2;
+}
+
+.double-size-vertical {
+  grid-row: span 2;
+}
